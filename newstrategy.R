@@ -2,6 +2,9 @@ require(quantmod)
 require(PerformanceAnalytics)
 
 symbolLst<-c("SPY","TLT")
+
+symbolLst<-c("SPY","TLT")
+
 symbolData <- new.env()
 getSymbols(symbolLst, from="2013-08-01")
 returns <- merge(Return.calculate(Ad(eval(parse(text=symbolLst[1])))), 
